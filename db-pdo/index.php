@@ -19,7 +19,10 @@ include_once 'includes/user.inc.php';
         // print_r(PDO::getAvailableDrivers());
 
         $object = new User();
-        echo $object->getUserWithCountCheck();
+        $rslt =  $object->getAllUser();
+        foreach($rslt as $r) {
+            echo $r . "<br>";
+        }
 
     ?>
 </body>

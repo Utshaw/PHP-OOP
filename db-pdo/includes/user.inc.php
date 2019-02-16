@@ -8,10 +8,12 @@ class User  extends Dbh{
         $stmt = $this->connect()->query("SELECT * FROM MYUSER");
 
         while($row = $stmt->fetch()) {
-            $uid = $row['uid'];
-            return $uid;
+            $results[] = $row['uid'];
+            
 
         }
+
+        return $results;
         
 
     }
